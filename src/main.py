@@ -37,9 +37,9 @@ def process_command(command, stack):
                 stack.append(int(num))
                 print(f'Stack is {stack}')
             else:
-                print(f'Invalid input, please enter an integer')
+                print('Invalid input, please enter an integer')
         else:
-            print(f'Invalid input, please enter PUSH followed by a number')
+            print('Invalid input, please enter PUSH followed by a number')
 
     #empty stack
     elif command == 'POP' and stack:
@@ -66,7 +66,7 @@ def process_command(command, stack):
         elif command == '/':
             stack.append(b // a)
     else:
-        print(f"Invalid command or not enough values in the stack")
+        print("Invalid command or not enough values in the stack")
 
 
 if __name__ == "__main__":
