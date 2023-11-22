@@ -1,6 +1,7 @@
 import unittest
 from src.main import process_command
 
+
 class TestStackOperators(unittest.TestCase):
     def test_operators_pass(self):
         stack = [5, 3, 8, 6]
@@ -35,6 +36,7 @@ class TestStackOperators(unittest.TestCase):
         stack = [5, 3, 8, 6]
         process_command('/', stack)
         self.assertNotEqual(stack, [5, 3, 8, 6])
+
 
 class TestStackCommands(unittest.TestCase):
     def test_commands_pass(self):

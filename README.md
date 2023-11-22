@@ -24,11 +24,7 @@ Write a python program which works as a fifth interpreter. Each line of input to
 
 ## Instructions
 
-To build the container `cd` into stack-assessment and run:
-
-` docker build -t stackassessment . `
-
-To start inputting commands run:
+To start inputting commands  `cd` into stack-assessment and run:
 
 `  python3 src/main.py  ` 
 
