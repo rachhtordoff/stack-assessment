@@ -8,15 +8,7 @@ def main():
             user_input = input("Enter a command: ")
 
             if user_input.startswith('PUSH'):
-                if len(user_input.split()) == 2:
-                    _, num = user_input.split()
-                    if num.isdigit():
-                        stack.append(int(num))
-                        print(f'stack is {stack}')
-                    else:
-                        print(f'invalid input, please enter an integer')
-                else:
-                    print(f'Invalid input, please enter PUSH followed by a number: {user_input}')
+                process_command(user_input, stack)
 
             elif user_input in allowed_commands:
                 process_command(user_input, stack)
@@ -36,8 +28,21 @@ def main():
 
 
 def process_command(command, stack):
+
+    # add number to stack
+    if command.startswith('PUSH'):
+        if len(command.split()) == 2:
+            _, num = command.split()
+            if num.isdigit():
+                stack.append(int(num))
+                print(f'stack is {stack}')
+            else:
+                print(f'invalid input, please enter an integer')
+        else:
+            print(f'Invalid input, please enter PUSH followed by a number')
+
     #empty stack
-    if command == 'POP' and stack:
+    elif command == 'POP' and stack:
         return stack.pop()
 
     #switch element places of the last 2 elements in list
@@ -61,7 +66,7 @@ def process_command(command, stack):
         elif command == '/':
             stack.append(b // a)
     else:
-        print(f"Invalid command or not enough values in the stack: '{command}'")
+        print(f"Invalid command or not enough values in the stack")
 
 
 if __name__ == "__main__":
