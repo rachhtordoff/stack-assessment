@@ -3,7 +3,7 @@ def main():
     while True:
         try:
             allowed_commands = ['PUSH', 'POP', 'SWAP', 'DUP', '+', '-', '*', '/']
-            
+
             # User inputs
             user_input = input("Enter a command: ")
 

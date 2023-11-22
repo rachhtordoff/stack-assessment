@@ -30,5 +30,9 @@ To build the container run:
 
 To start inputting commands run:
 
-`  ` 
+`  python3 src/main.py  ` 
+
+To run the unit test run:
+
+` python3 -m unittest tests/test_main.py `
 
