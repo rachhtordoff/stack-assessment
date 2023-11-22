@@ -1,7 +1,7 @@
 import unittest
 from src.main import process_command
 
-class TestStackArithmetic(unittest.TestCase):
+class TestStackOperators(unittest.TestCase):
     def test_addition(self):
         stack = [5, 3, 8, 6]
         process_command('+', stack)
