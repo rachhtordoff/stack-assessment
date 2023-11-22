@@ -12,7 +12,7 @@ def main():
 
             elif user_input in allowed_commands:
                 process_command(user_input, stack)
-                print(f"stack is {stack}")
+                print(f"Stack is {stack}")
             else:
                 print("Invalid Input. Please enter a valid command. 'PUSH', 'POP', 'SWAP', 'DUP', '+', '-', '*' OR '/'")
 
@@ -20,11 +20,11 @@ def main():
 
         except KeyboardInterrupt:
             # handle user tryimg to exit
-            print("\nExiting..")
+            print("\nExiting programme..")
             break
         except Exception as e:
             #handle additional exceptions
-            print(f"Error: {e}")
+            print(f"An error has occurred: {e}")
 
 
 def process_command(command, stack):
@@ -35,9 +35,9 @@ def process_command(command, stack):
             _, num = command.split()
             if num.isdigit():
                 stack.append(int(num))
-                print(f'stack is {stack}')
+                print(f'Stack is {stack}')
             else:
-                print(f'invalid input, please enter an integer')
+                print(f'Invalid input, please enter an integer')
         else:
             print(f'Invalid input, please enter PUSH followed by a number')
 
