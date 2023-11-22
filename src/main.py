@@ -16,7 +16,7 @@ def main():
                     else:
                         print(f'invalid input, please enter an integer')
                 else:
-                    print(f'invalid input, please enter PUSH followed by a number')
+                    print(f'Invalid input, please enter PUSH followed by a number: {user_input}')
 
             elif user_input in allowed_commands:
                 process_command(user_input, stack)
@@ -28,11 +28,11 @@ def main():
 
         except KeyboardInterrupt:
             # handle user tryimg to exit
-            print("\nExiting program.")
+            print("\nExiting..")
             break
         except Exception as e:
-            # Handle additional exceptions
-            print(f"An error occurred: {e}")
+            #handle additional exceptions
+            print(f"Error: {e}")
 
 
 def process_command(command, stack):
@@ -61,7 +61,7 @@ def process_command(command, stack):
         elif command == '/':
             stack.append(b // a)
     else:
-        print(f"Invalid command or not enough values in the stack for '{command}'")
+        print(f"Invalid command or not enough values in the stack: '{command}'")
 
 
 if __name__ == "__main__":

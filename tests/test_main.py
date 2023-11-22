@@ -22,6 +22,8 @@ class TestStackOperators(unittest.TestCase):
         process_command('/', stack)
         self.assertEqual(stack, [5, 3, 2])
 
+# TO DO..
+# add more tests for word commands
 
 if __name__ == '__main__':
     unittest.main()
